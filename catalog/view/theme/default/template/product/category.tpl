@@ -30,7 +30,7 @@
       <h3><?php echo $text_refine; ?></h3>
       <?php if (count($categories) <= 5) { ?>
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-12">
           <ul>
             <?php foreach ($categories as $category) { ?>
             <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
@@ -41,7 +41,7 @@
       <?php } else { ?>
       <div class="row">
         <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <ul>
             <?php foreach ($categories as $category) { ?>
             <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>

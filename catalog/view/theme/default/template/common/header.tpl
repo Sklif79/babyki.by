@@ -23,6 +23,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/theme/default/stylesheet/custom.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -69,22 +70,64 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div id="logo">
           <?php if ($logo) { ?>
-          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+          <a href="<?php echo $home; ?>">
+            <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
+          </a>
+          <div class="after-logo">
+            Интернет-магазин<br>
+            детских товаров
+          </div>
           <?php } else { ?>
           <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-5"><?php echo $search; ?>
+      <div class="col-sm-6">
+        <div class="col-sm-6 col-xs-12">
+          <div class="schedule">
+            Время работы:<br>
+            с <b>09.00</b> до <b>21.00</b><br>
+            без выходных
+          </div>
+          <div class="h-allday">
+            Прием заказов через сайт <b>КРУГЛОСУТОЧНО</b>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+
+          <div class="contacts-wrap">
+            <div class="contact-el">
+              <img src="" alt="">
+              <a href="tel:375290000000">+375 29 000-00-00</a>
+            </div>
+
+            <div class="contact-el">
+              <img src="" alt="">
+              <a href="tel:375330000000">+375 33 000-00-00</a>
+            </div>
+
+            <div class="contact-el">
+              <img src="" alt="">
+              <a href="mailto:babyki@mail.ru">babyki@mail.ru</a>
+            </div>
+          </div>
+
+          <a href="#popup-callback" class="callback">Заказать обратный звонок</a>
+
+        </div>
       </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
+      <div class="col-sm-3">
+        <?php echo $cart; ?>
+        <?php echo $search; ?>
+      </div>
     </div>
   </div>
 </header>
-<?php if ($categories) { ?>
+<!-- вывод меню всегда -->
+<?php /* if ($categories) { */?>
 <div class="container">
   <nav id="menu" class="navbar">
     <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
@@ -111,8 +154,15 @@
         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
         <?php } ?>
         <?php } ?>
+
+        <li><a href="/">Главная</a></li>
+        <li><a href="/index.php?route=information/information&information_id=4">О магазине</a></li>
+        <li><a href="/index.php?route=information/information&information_id=3">Доставка и оплата</a></li>
+        <li><a href="/index.php?route=information/information&information_id=7">Полезная информация</a></li>
+        <li><a href="/index.php?route=information/contact">Контакты</a></li>
+        <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> &nbsp;<?php echo $text_shopping_cart; ?></a></li>
       </ul>
     </div>
   </nav>
 </div>
-<?php } ?>
+<?php /*}*/ ?>

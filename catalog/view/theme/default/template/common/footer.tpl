@@ -39,15 +39,23 @@
       </div>
     </div>
     <hr>
-    <p><?php echo $powered; ?></p>
+    <div class="copyright">
+      2017 &copy;babyki.by
+    </div>
+
   </div>
 </footer>
 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
 
-<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+<div class="popup mfp-hide" id="popup-callback">
+  <form action="mail.php" class="callback-form" method="post">
+    <div class="callback-form__title">
+      Заказать обратный звонок
+    </div>
 
-</body></html>
+  </form>
+</div>
+
+
+</body>
+</html>

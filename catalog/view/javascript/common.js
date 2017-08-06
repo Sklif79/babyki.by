@@ -33,6 +33,13 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
+    $('.callback').magnificPopup({
+        type: 'inline'
+    });
+
+
+
+
 	// Highlight any found errors
 	$('.text-danger').each(function() {
 		var element = $(this).parent().parent();

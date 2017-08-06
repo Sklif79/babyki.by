@@ -1,0 +1,161 @@
+body {
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    white-space: nowrap;
+}
+
+.container {
+    background: #fff;
+}
+
+#top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+#top .container, footer  .container{
+    background: inherit;
+}
+
+header {
+    margin-top: 64px;
+}
+
+header .container {
+    padding-top: 30px;
+}
+
+.list-inline li:nth-of-type(2),
+.list-inline li:nth-of-type(3) {
+    display: none;
+}
+
+footer {
+    padding-bottom: 20px;
+    background-color: #229ac8;
+    background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+}
+
+footer hr {
+    border-color: #ffffff;
+}
+
+.copyright {
+    opacity: 0.5;
+}
+
+.image {
+    padding: 0 10px;
+}
+
+#search .input-lg {
+    height: 30px;
+    line-height: 28px;
+}
+
+#search .btn-lg {
+    padding: 5px 9px;
+}
+
+.input-lg {
+    border-radius: 4px 0 0 4px;
+}
+
+.after-logo {
+    font-weight: bold;
+    text-align: center;
+    color: #31c6f0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.h-allday {
+    margin-top: 9px;
+}
+
+.contacts-wrap {
+    text-align: center;
+}
+
+.contact-el {
+    padding-left: 30px;
+}
+
+.contact-el a {
+    font-weight: bold;
+    color: #666;
+}
+
+.callback, .callback:focus {
+    margin-top: 15px;
+    border: 2px solid #1f90bb;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 4px;
+    color: #1f90bb;
+    font-weight: bold;
+    height: 30px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.callback:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+    border-color: transparent;
+}
+
+.popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 810px) {
+    header {
+        margin-top: 44px;
+    }
+
+    header .container {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+
