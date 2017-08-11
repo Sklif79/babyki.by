@@ -23,10 +23,12 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/javascript/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="catalog/view/theme/default/stylesheet/custom.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+<script src="catalog/view/javascript/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 <?php foreach ($links as $link) { ?>
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
@@ -85,41 +87,43 @@
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="col-sm-6 col-xs-12">
-          <div class="schedule">
-            Время работы:<br>
-            с <b>09.00</b> до <b>21.00</b><br>
-            без выходных
-          </div>
-          <div class="h-allday">
-            Прием заказов через сайт <b>КРУГЛОСУТОЧНО</b>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-
-          <div class="contacts-wrap">
-            <div class="contact-el">
-              <img src="" alt="">
-              <a href="tel:375290000000">+375 29 000-00-00</a>
+      <div class="col-sm-9 col-md-6">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <div class="schedule">
+              Время работы:<br>
+              с <b>09.00</b> до <b>21.00</b><br>
+              без выходных
             </div>
-
-            <div class="contact-el">
-              <img src="" alt="">
-              <a href="tel:375330000000">+375 33 000-00-00</a>
-            </div>
-
-            <div class="contact-el">
-              <img src="" alt="">
-              <a href="mailto:babyki@mail.ru">babyki@mail.ru</a>
+            <div class="h-allday">
+              Прием заказов через сайт <b>КРУГЛОСУТОЧНО</b>
             </div>
           </div>
+          <div class="col-sm-6 col-xs-12">
 
-          <a href="#popup-callback" class="callback">Заказать обратный звонок</a>
+            <div class="contacts-wrap">
+              <div class="contact-el">
+                <img src="/image/velcom.png" alt="">
+                <span>+375 29 000-00-00</span>
+              </div>
 
+              <div class="contact-el">
+                <img src="/image/mts.png" alt="">
+                <span>+375 33 000-00-00</span>
+              </div>
+
+              <div class="contact-el">
+                <img src="/image/mai.png" alt="">
+                <span>babyki@mail.ru</span>
+              </div>
+            </div>
+
+            <a href="#popup-callback" class="callback">Обратный звонок</a>
+
+          </div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-12 col-md-3">
         <?php echo $cart; ?>
         <?php echo $search; ?>
       </div>

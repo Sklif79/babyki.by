@@ -1,6 +1,10 @@
 <?php echo $header; ?>
 <div class="container">
-  <div class="row"><?php echo $column_left; ?>
+  <div class="row">
+
+    <div class="mobile-aside-reverse">
+
+    <?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
     <?php } elseif ($column_left || $column_right) { ?>
@@ -9,6 +13,9 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?><?php echo $content_bottom; ?></div>
+
+    </div>
+
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>

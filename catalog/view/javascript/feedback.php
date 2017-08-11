@@ -3,14 +3,10 @@
 $errors = array();
 $form_data = array();
 
-if ($_POST['name'] == "")
-    {
-        $errors['name'] = 'Введите Ваше имя';
-    }
 
 if ($_POST['phone'] == "")
 {
-    $errors['name'] = 'Введите Ваш телефон';
+    $errors['name'] = 'Укажите телефон';
 }
 
 if (!empty($errors))
@@ -30,10 +26,10 @@ else
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf8' . "\r\n";
 
-        if (mail('sklazer@mail.ru', 'Заявка с сайта '.$_SERVER['HTTP_HOST'], $message, $headers))
+        if (mail('sklif_@mail.ru', 'Заявка с сайта '.$_SERVER['HTTP_HOST'], $message, $headers))
             {
                 $form_data['success'] = true;
-                $form_data['posted'] = 'Мы свяжемся с Вами в течение 12 часов';
+                $form_data['posted'] = 'Мы свяжемся с Вами';
             }
         else
             {

@@ -5,7 +5,11 @@
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
-  <div class="row"><?php echo $column_left; ?>
+  <div class="row">
+
+    <div class="mobile-aside-reverse">
+
+    <?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
     <?php } elseif ($column_left || $column_right) { ?>
@@ -391,6 +395,9 @@
       </p>
       <?php } ?>
       <?php echo $content_bottom; ?></div>
+
+    </div>
+
     <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript"><!--

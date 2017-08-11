@@ -47,11 +47,20 @@
 </footer>
 
 
-<div class="popup mfp-hide" id="popup-callback">
-  <form action="mail.php" class="callback-form" method="post">
+<div class="popup" id="popup-callback">
+  <form class="callback-form" id="popup-callback-form" method="post">
     <div class="callback-form__title">
       Заказать обратный звонок
     </div>
+    <div class="popup-content">
+        <input type="text" placeholder="Ваше имя" name="name" id="name" class="input_text"/>
+        <div id="bthrow_error_name"></div>
+        <input type="text" placeholder="Ваш телефон" name="phone" id="phone" class="input_text"/>
+        <div id="bthrow_error_phone"></div>
+        <input class="callback-submit" type="submit" value="Отправить заявку" />
+        <div class="throw_error"></div>
+    </div>
+
 
   </form>
 </div>

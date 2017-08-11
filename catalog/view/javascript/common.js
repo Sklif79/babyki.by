@@ -23,7 +23,7 @@ function getURLVar(key) {
 		var query = String(document.location.pathname).split('/');
 		if (query[query.length - 1] == 'cart') value['route'] = 'checkout/cart';
 		if (query[query.length - 1] == 'checkout') value['route'] = 'checkout/checkout';
-		
+
 		if (value[key]) {
 			return value[key];
 		} else {
@@ -33,9 +33,59 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
-    $('.callback').magnificPopup({
-        type: 'inline'
+    $('.callback').fancybox({
+        padding: 0,
+        helpers:  {
+            overlay : {
+                css : {
+                    'background' : 'rgba(255,255,255,0.8)'
+                }
+            }
+        }
     });
+
+
+    //обратный звонок
+    var contentForm = $('.popup-content').html();
+    $('#popup-callback-form').on('focus','#phone', function () {
+        $(this).removeClass('error');
+    });
+
+    var messageSucces = 'Ваше сообщение отправлено!';
+    var messageError = 'Ошибка отправки!';
+
+    function afterSend(msg, classList) {
+        $(".popup-content").html('<p class=' + classList + '>' + msg + '</p>');
+        setTimeout(function () {
+            $(".popup-content").empty();
+            $.fancybox.close();
+        }, 1500);
+        setTimeout(function () {
+            $(".popup-content").append(contentForm);
+        }, 2200);
+    }
+
+    $("#popup-callback-form").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "/catalog/view/javascript/feedback.php",
+            data: $(this).serialize(),
+            success: function(data) {
+                if ($('#phone').val() == "") {
+                    $('#phone').addClass('error').attr('placeholder', 'Укажите номер телефона');
+                    return false;
+                }
+                afterSend(messageSucces, "success-message");
+
+            },
+            error: function () {
+                afterSend(messageError, "error-message");
+            }
+        });
+        return false;
+    });
+
+
 
 
 
