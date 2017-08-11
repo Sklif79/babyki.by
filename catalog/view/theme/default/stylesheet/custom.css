@@ -210,7 +210,15 @@ footer hr {
     font-weight: bold;
 }
 
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
 
+.info-txt {
+    font-size: 10px;
+    line-height: 14px;
+}
 
 
 

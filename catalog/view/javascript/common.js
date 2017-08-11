@@ -33,6 +33,13 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
+	setTimeout(function () {
+        $('#button-account').trigger('click');
+    }, 500)
+	console.log('fff')
+
+
+
     $('.callback').fancybox({
         padding: 0,
         helpers:  {
