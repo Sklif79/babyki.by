@@ -31,10 +31,6 @@ header {
     margin-top: 64px;
 }
 
-header .container {
-    /*padding-top: 30px;*/
-}
-
 .list-inline li:nth-of-type(2),
 .list-inline li:nth-of-type(3) {
     display: none;
@@ -127,10 +123,8 @@ footer hr {
 .popup {
     position: relative;
     background: #FFF;
-    /*padding: 20px;*/
     width: auto;
     max-width: 500px;
-    /*margin: 20px auto;*/
     display: none;
     border-radius: 5px;
 }
@@ -155,7 +149,6 @@ footer hr {
     font-weight: bold;
     text-align: center;
     font-size: 20px;
-    /*margin-bottom: 30px;*/
     height: 50px;
     line-height: 50px;
     color: #fff;
@@ -219,16 +212,19 @@ footer hr {
     line-height: 14px;
 }
 
-/*.checkout-checkout #accordion {*/
-    /*opacity: 0;*/
-/*}*/
-
-/*hide order input*/
 .hide {
     display: none;
 }
 
+#order-form-submit .panel-heading {
+    display: none;
+}
 
+@media screen and (max-width: 1200px) {
+    .product-thumb .button-group {
+        display: flex;
+    }
+}
 
 
 @media screen and (max-width: 992px) {
@@ -253,7 +249,6 @@ footer hr {
     }
 
     .contact-el {
-        /*justify-content: center;*/
         margin-left: auto;
         margin-right: auto;
         flex: none;

@@ -18,7 +18,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content order-form-submit" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <div class="panel-group" id="accordion">
         <div class="panel panel-default hide">
@@ -57,7 +57,7 @@
             <div class="panel-body"></div>
           </div>
         </div>
-        <div class="panel panel-default">
+        <div class="panel panel-default hide">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h4>
           </div>
@@ -66,7 +66,7 @@
           </div>
         </div>
         <?php } ?>
-        <div class="panel panel-default">
+        <div class="panel panel-default hide">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_payment_method; ?></h4>
           </div>
@@ -170,7 +170,7 @@ $(document).ready(function() {
                            clearInterval(intervalId);
                            return false;
                        }
-                       
+
                        $('a[href=\'#collapse-payment-address\']').trigger('click');
 
                    }, 100);

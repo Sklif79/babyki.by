@@ -33,17 +33,43 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
+    $('body').on('click', ('#button-guest'), function () {
+
+		var intervalId = setInterval(function () {
+			if ( $('#button-shipping-method').length ) {
+
+				setTimeout(function () {
+                    $('#button-shipping-method').trigger('click');
+
+                    nextStep();
+                    // setTimeout(function () {
+                    //     $('#button-payment-method').trigger('click');
+                    // }, 500)
 
 
-    // setTimeout(function () {
-    //     $('#button-account').trigger('click');
-    // }, 800);
-    //
-    // setTimeout(function () {
-    //     $('.checkout-checkout #accordion').css({'opacity':'1'});
-    // }, 1000);
+                }, 300);
+
+                clearInterval(intervalId);
+			}
+
+        }, 100);
+
+    });
 
 
+    function nextStep() {
+        var intervalId = setInterval(function () {
+            if ( $('#button-payment-method').length ) {
+
+                setTimeout(function () {
+                    $('#button-payment-method').trigger('click');
+                }, 300);
+
+                clearInterval(intervalId);
+
+            }
+        }, 100);
+    }
 
 
     $('.callback').fancybox({
@@ -97,10 +123,6 @@ $(document).ready(function() {
         });
         return false;
     });
-
-
-
-
 
 
 	// Highlight any found errors

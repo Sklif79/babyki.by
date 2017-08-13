@@ -46,7 +46,7 @@
             <a href="/index.php?route=information/information&information_id=3">Доставка и оплата</a>
           </li>
           <li>
-            <a href="/index.php?route=information/information&information_id=7">Полезная информация</a>
+            <a href="/index.php?route=newsblog/category&newsblog_path=1">Полезная информация</a>
           </li>
           <li>
             <a href="/index.php?route=information/contact">Контакты</a>
