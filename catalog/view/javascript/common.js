@@ -33,10 +33,16 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
-	setTimeout(function () {
-        $('#button-account').trigger('click');
-    }, 500)
-	console.log('fff')
+
+
+    // setTimeout(function () {
+    //     $('#button-account').trigger('click');
+    // }, 800);
+    //
+    // setTimeout(function () {
+    //     $('.checkout-checkout #accordion').css({'opacity':'1'});
+    // }, 1000);
+
 
 
 

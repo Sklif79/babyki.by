@@ -21,7 +21,7 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
+        <div class="panel panel-default hide">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_option; ?></h4>
           </div>
@@ -49,7 +49,7 @@
         </div>
         <?php } ?>
         <?php if ($shipping_required) { ?>
-        <div class="panel panel-default">
+        <div class="panel panel-default hide">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h4>
           </div>
@@ -139,35 +139,51 @@ $(document).ready(function() {
 });
 <?php } ?>
 
-// Checkout
-$(document).delegate('#button-account', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/' + $('input[name=\'account\']:checked').val(),
-        dataType: 'html',
-        beforeSend: function() {
-        	$('#button-account').button('loading');
-		},
-        complete: function() {
-			$('#button-account').button('reset');
-        },
-        success: function(html) {
-            $('.alert, .text-danger').remove();
+  $(document).ready(function () {
+      $(document).delegate('#button-account', 'click', function() {
+          $.ajax({
+              url: 'index.php?route=checkout/' + $('input[name=\'account\']:checked').val(),
+              dataType: 'html',
+              beforeSend: function() {
+                  $('#button-account').button('loading');
+              },
+              complete: function() {
+                  $('#button-account').button('reset');
+              },
+              success: function(html) {
+                  $('.alert, .text-danger').remove();
 
-            $('#collapse-payment-address .panel-body').html(html);
+                  $('#collapse-payment-address .panel-body').html(html);
 
-			if ($('input[name=\'account\']:checked').val() == 'register') {
-				$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_account; ?> <i class="fa fa-caret-down"></i></a>');
-			} else {
-				$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-			}
+                  if ($('input[name=\'account\']:checked').val() == 'register') {
+                      $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_account; ?> <i class="fa fa-caret-down"></i></a>');
+                  } else {
+                      $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
+                  }
 
-			$('a[href=\'#collapse-payment-address\']').trigger('click');
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-});
+                  console.log($('#collapse-payment-address.in').length)
+
+                   var intervalId = setInterval(function () {
+
+                       if ( $('#collapse-payment-address.in').length ) {
+
+                           clearInterval(intervalId);
+                           return false;
+                       }
+                       
+                       $('a[href=\'#collapse-payment-address\']').trigger('click');
+
+                   }, 100);
+
+//                  $('a[href=\'#collapse-payment-address\']').trigger('click');
+
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                  alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+              }
+          });
+      });
+  })
 
 // Login
 $(document).delegate('#button-login', 'click', function() {

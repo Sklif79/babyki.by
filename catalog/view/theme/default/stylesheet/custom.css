@@ -23,6 +23,10 @@ body {
     background: inherit;
 }
 
+#input-payment-telephone + .text-danger {
+    display: none;
+}
+
 header {
     margin-top: 64px;
 }
@@ -194,11 +198,6 @@ footer hr {
     line-height: 36px;
 }
 
-/*.mfp-ready.mfp-close-btn-in .mfp-close {*/
-    /*color: #fff;*/
-    /*height: 50px;*/
-/*}*/
-
 .success-message {
     text-align: center;
     font-weight: bold;
@@ -220,8 +219,14 @@ footer hr {
     line-height: 14px;
 }
 
+/*.checkout-checkout #accordion {*/
+    /*opacity: 0;*/
+/*}*/
 
-
+/*hide order input*/
+.hide {
+    display: none;
+}
 
 
 

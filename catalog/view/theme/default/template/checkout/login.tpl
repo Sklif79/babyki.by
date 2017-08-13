@@ -1,3 +1,8 @@
+<script language="Javascript" type="text/javascript">
+    $(document).ready(function(){
+        $('#button-account').trigger('click');
+    });
+</script>
 <div class="row">
   <div class="col-sm-6">
     <h2><?php echo $text_new_customer; ?></h2>
@@ -15,7 +20,7 @@
     <div class="radio">
       <label>
         <?php if ($account == 'guest') { ?>
-        <input type="radio" name="account" value="guest" />
+        <input type="radio" name="account" value="guest" checked="checked"/>
         <?php } else { ?>
         <input type="radio" name="account" value="guest" checked="checked" />
         <?php } ?>
