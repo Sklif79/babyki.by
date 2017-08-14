@@ -54,7 +54,7 @@
               </div>
               <div class="col-sm-3">
                 <strong>E-mail</strong>
-                <div>babyki@mail.ru</div>
+                <div> info@babyki.by</div>
               </div>
             </div>
           </div>

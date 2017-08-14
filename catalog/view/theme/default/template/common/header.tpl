@@ -114,7 +114,7 @@
 
               <div class="contact-el">
                 <img src="/image/mai.png" alt="">
-                <span>babyki@mail.ru</span>
+                <span>info@babyki.by</span>
               </div>
             </div>
 
