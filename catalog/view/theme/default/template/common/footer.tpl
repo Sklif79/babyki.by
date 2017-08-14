@@ -66,6 +66,9 @@
             <a href="/index.php?route=information/sitemap">Карта сайта</a>
           </li>
           <li>
+            <a href="/index.php?route=information/information&information_id=9">Каталог</a>
+          </li>
+          <li>
             <a href="/index.php?route=product/manufacturer">Производители</a>
           </li>
           <li>

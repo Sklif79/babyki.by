@@ -46,6 +46,35 @@ class ControllerCommonColumnLeft extends Controller {
 				'children' => array()
 			);
 			
+
+      		$newsblog = array();
+
+			if ($this->user->hasPermission('access', 'newsblog/category')) {
+				$newsblog[] = array(
+					'name'	   => $this->language->get('text_newsblog_category'),
+					'href'     => $this->url->link('newsblog/category', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+
+			if ($this->user->hasPermission('access', 'newsblog/article')) {
+				$newsblog[] = array(
+					'name'	   => $this->language->get('text_newsblog_article'),
+					'href'     => $this->url->link('newsblog/article', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+
+			if ($newsblog) {
+				$data['menus'][] = array(
+					'id'       => 'menu-newsblog',
+					'icon'	   => 'fa-newspaper-o',
+					'name'	   => $this->language->get('text_newsblog'),
+					'href'     => '',
+					'children' => $newsblog
+				);
+			}
+      
 			// Catalog
 			$catalog = array();
 			

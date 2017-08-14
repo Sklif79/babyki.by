@@ -104,12 +104,12 @@
             <div class="contacts-wrap">
               <div class="contact-el">
                 <img src="/image/velcom.png" alt="">
-                <span>+375 29 000-00-00</span>
+                <span>+375 29 543-57-57</span>
               </div>
 
               <div class="contact-el">
                 <img src="/image/mts.png" alt="">
-                <span>+375 33 000-00-00</span>
+                <span>+375 44 543-57-57</span>
               </div>
 
               <div class="contact-el">

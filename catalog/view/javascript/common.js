@@ -56,6 +56,11 @@ $(document).ready(function() {
 
     });
 
+    // $('body').on('click', ('#button-payment-method'), function () {
+    //                 $('#button-payment-method').trigger('click');
+    //
+    // });
+
 
     function nextStep() {
         var intervalId = setInterval(function () {
@@ -70,6 +75,17 @@ $(document).ready(function() {
             }
         }, 100);
     }
+
+
+    // setTimeout(function () {
+    //     $('#button-account').trigger('click');
+    // }, 800);
+    //
+    // setTimeout(function () {
+    //     $('.checkout-checkout #accordion').css({'opacity':'1'});
+    // }, 1000);
+
+
 
 
     $('.callback').fancybox({
@@ -123,6 +139,10 @@ $(document).ready(function() {
         });
         return false;
     });
+
+
+
+
 
 
 	// Highlight any found errors

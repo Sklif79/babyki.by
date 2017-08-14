@@ -34,6 +34,7 @@
               </div>
               <div class="col-sm-3"><strong><?php echo $text_telephone; ?></strong><br>
                 <?php echo $telephone; ?><br />
+                +375 44 543-57-57
                 <br />
                 <?php if ($fax) { ?>
                 <strong><?php echo $text_fax; ?></strong><br>
@@ -50,6 +51,10 @@
                 <strong><?php echo $text_comment; ?></strong><br />
                 <?php echo $comment; ?>
                 <?php } ?>
+              </div>
+              <div class="col-sm-3">
+                <strong>E-mail</strong>
+                <div>babyki@mail.ru</div>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ else
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf8' . "\r\n";
 
-        if (mail('sklif_@mail.ru', 'Заявка с сайта '.$_SERVER['HTTP_HOST'], $message, $headers))
+        if (mail('babyki@mail.ru', 'Заявка с сайта '.$_SERVER['HTTP_HOST'], $message, $headers))
             {
                 $form_data['success'] = true;
                 $form_data['posted'] = 'Мы свяжемся с Вами';

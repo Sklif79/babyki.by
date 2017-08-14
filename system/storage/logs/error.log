@@ -148,3 +148,9 @@
 2017-08-13 6:03:21 - PHP Notice:  Undefined variable: entry_lastname in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/catalog/view/theme/default/template/checkout/guest.tpl on line 28
 2017-08-13 6:03:21 - PHP Notice:  Undefined variable: lastname in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/catalog/view/theme/default/template/checkout/guest.tpl on line 29
 2017-08-13 6:03:21 - PHP Notice:  Undefined variable: entry_lastname in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/catalog/view/theme/default/template/checkout/guest.tpl on line 29
+2017-08-13 20:48:41 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
+2017-08-13 20:49:07 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
+2017-08-13 20:49:41 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
+2017-08-13 20:50:55 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
+2017-08-13 21:05:46 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
+2017-08-13 21:21:04 - PHP Notice:  Undefined variable: ckeditor in /var/www/vhosts/mebelgood.by/babyki.mebelgood.by/admin/view/template/module/newsblog_articles.tpl on line 168
