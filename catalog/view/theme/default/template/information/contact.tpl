@@ -21,9 +21,14 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="row">
-              <?php if ($image) { ?>
-              <div class="col-sm-3"><img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" class="img-thumbnail" /></div>
-              <?php } ?>
+              <!--<?php if ($image) { ?>
+              <div class="col-sm-3">
+                <img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" class="img-thumbnail" />
+              </div>
+              <?php } ?>-->
+              <div class="col-sm-3">
+                <img src="http://babyki.mebelgood.by/image/catalog/logonew.png" title="Babyki.by" alt="Babyki.by" class="contacts-img">
+              </div>
               <div class="col-sm-3"><strong><?php echo $store; ?></strong><br />
                 <address>
                 <?php echo $address; ?>
@@ -33,9 +38,12 @@
                 <?php } ?>
               </div>
               <div class="col-sm-3"><strong><?php echo $text_telephone; ?></strong><br>
-                <?php echo $telephone; ?><br />
-                +375 44 543-57-57
+                <?php echo $telephone; ?> (MTC)<br />
+                +375 44 543-57-57 (Velcom)
                 <br />
+
+                <strong>E-mail</strong>
+                <div> info@babyki.by</div>
                 <?php if ($fax) { ?>
                 <strong><?php echo $text_fax; ?></strong><br>
                 <?php echo $fax; ?>
@@ -51,10 +59,6 @@
                 <strong><?php echo $text_comment; ?></strong><br />
                 <?php echo $comment; ?>
                 <?php } ?>
-              </div>
-              <div class="col-sm-3">
-                <strong>E-mail</strong>
-                <div> info@babyki.by</div>
               </div>
             </div>
           </div>

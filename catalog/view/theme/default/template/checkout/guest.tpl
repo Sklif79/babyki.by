@@ -159,8 +159,8 @@
         <input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-payment-company" class="form-control" />
       </div>
       <div class="form-group">
-        <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label>
-        <input type="text" name="address_1" value="<?php echo $address_1; ?>" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-address-1" class="form-control" />
+        <label class="control-label" for="input-payment-met"><?php echo $entry_address_1; ?></label>
+        <input type="text" name="address_1" value="<?php echo $address_1; ?>" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-met" class="form-control" />
       </div>
       <div class="form-group hide">
         <label class="control-label" for="input-payment-address-2"><?php echo $entry_address_2; ?></label>
@@ -190,6 +190,14 @@
       <div class="form-group hide">
         <label class="control-label" for="input-payment-zone"><?php echo $entry_zone; ?></label>
         <select name="zone_id" id="input-payment-zone" class="form-control">
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="input-payment-met">Способ оплаты</label>
+        <select class="noselect" onchange="className=selectedIndex?'selected':'noselect'" id="input-payment-met">
+          <option class="selected" value="" style="display:none">Выберите способ оплаты</option>
+          <option class="selected" value="">Оплата картой</option>
+          <option class="selected" value="">Оплата наличными</option>
         </select>
       </div>
       <?php foreach ($custom_fields as $custom_field) { ?>
